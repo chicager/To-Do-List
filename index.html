@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>ToDo List</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/main.css" />
@@ -13,13 +13,29 @@
 <body>
     
     <div id="container">     
-        <h1>To-Do List<i class="fa fa-plus"></i></h1>
+        
+        <h1>
+            To-Do List
+            <i class="fa fa-plus"></i>
+        </h1>
+
         <input type="text" placeholder="Add New Todo">
+
         <ul>
-            <li><span><i class="fa fa-trash"></i></span>First Todo</li>
-            <li><span><i class="fa fa-trash"></i></span>Second Todo</li>
-            <li><span><i class="fa fa-trash"></i></span>Third Todo</li>
+            <li>
+                <div class="icon-container"><i class="fa fa-trash"></i></div>
+                <p>First Todo</p>
+            </li>
+            <li>
+                <div class="icon-container"><i class="fa fa-trash"></i></div>
+                <p>Second Todo</p>
+            </li>
+            <li>
+                <div class="icon-container"><i class="fa fa-trash"></i></div>
+                <p>Third Todo</p>
+            </li>
         </ul>
+
     </div>
 
     <script src="assets/js/main.js"></script>

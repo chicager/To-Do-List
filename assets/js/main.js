@@ -2,7 +2,7 @@ $('ul').on('click', 'li', function () {
     $(this).toggleClass('completed');
 });
 
-$('ul').on('click', 'span', function (event) {
+$('ul').on('click', 'div', function (event) {
     $(this).parent().fadeOut(250, function () {
         $(this).remove();
     });
@@ -15,12 +15,14 @@ $('input[type="text"]').on('keypress', function (event) {
         if ($(this).val() !== '') {
             var todoText = $(this).val();
             $(this).val('');
-            $('ul').prepend('<li><span><i class="fa fa-trash"></i></span>' + todoText + '</li>');
+            $('ul').prepend('<li><div class="icon-container"><i class="fa fa-trash"></i></div><p>' +
+                            todoText + '</p></li>');
         }
     }
 });
 
 $('h1').on('click', '.fa-plus', function (event) {
-   $('input[type="text"]').fadeToggle(250);
+    $('input[type="text"]').fadeToggle(250, function () {
+        $(this).focus();
+    });
 });
-
