@@ -34,7 +34,7 @@ h1 {
     font-weight: normal;
 }
 
-.fa-plus {
+.fa-plus{
     float: right;
 }
 
@@ -65,8 +65,9 @@ ul {
 }
 
 li {
-    height: 40px;
-    line-height: 40px;
+    display: flex;
+    
+    line-height: 25px;
     
     background: #fff;
     color: #666;
@@ -76,25 +77,39 @@ li:nth-child(2n) {
     background: #f7f7f7;
 }
 
-span {  
+li:hover div {
+    width: 12%;
+    opacity: 1.0;
+}
+
+li:hover p{
+    width: 88%;
+}
+
+.icon-container{
     width: 0;
-    height: 40px; 
     
-    display: inline-block;
-    margin-right: 20px;
+    display: flex;
+    justify-content: center;
     
-    text-align: center;
     color: #fff;
+    background: #e74c3c;
     
     opacity: 0;
-    background: #e74c3c;
-
     transition: 0.1s linear;
 }
 
-li:hover span {
-    width: 40px;
-    opacity: 1.0;
+.fa-trash{
+    align-self: center;
+}
+
+p{
+    width: 100%;
+    padding: 6px 6px 10px 20px;
+    margin: 0;
+    
+    overflow: hidden;
+    word-wrap: break-word;
 }
 
 .completed {
