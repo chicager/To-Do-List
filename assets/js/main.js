@@ -1,5 +1,21 @@
+var x = {};
+
 $('ul').on('click', 'li', function () {
+
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+
+        if (x !== this) {
+            x = this;
+            return;
+            
+        } else {
+            $(this).toggleClass('completed');
+            return;
+        }
+    }
+
     $(this).toggleClass('completed');
+
 });
 
 $('ul').on('click', 'div', function (event) {
@@ -16,7 +32,7 @@ $('input[type="text"]').on('keypress', function (event) {
             var todoText = $(this).val();
             $(this).val('');
             $('ul').prepend('<li><div class="icon-container"><i class="fa fa-trash"></i></div><p>' +
-                            todoText + '</p></li>');
+                todoText + '</p></li>');
         }
     }
 });
